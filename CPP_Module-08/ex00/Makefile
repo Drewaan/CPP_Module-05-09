@@ -1,4 +1,4 @@
-NAME = EasyFind
+NAME = Easy_find
 
 COMP = c++
 FLAGS = -g -Wall -Wextra -Werror -Weffc++ -std=c++98
@@ -24,7 +24,7 @@ $(NAME): $(OBJS)
 	@echo " ╚██████╗██║     ██║       ╚██████╔╝╚█████╔╝"
 	@echo "  ╚═════╝╚═╝     ╚═╝        ╚═════╝  ╚════╝ "
 	@echo " ==========================================="
-	@echo " |      EX00: EasyFind     by aamaya-g     |"
+	@echo " |      EX00: Easy Find   by aamaya-g      |"
 	@echo " ==========================================="
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
@@ -41,4 +41,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean re all⏎   
+.PHONY: clean fclean re all⏎  

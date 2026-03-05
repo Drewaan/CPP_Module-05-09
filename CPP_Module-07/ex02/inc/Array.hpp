@@ -6,11 +6,13 @@
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 19:14:17 by aamaya-g          #+#    #+#             */
-/*   Updated: 2026/02/18 19:14:38 by aamaya-g         ###   ########.fr       */
+/*   Updated: 2026/03/03 16:18:50 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ARRAY_HPP
 # define ARRAY_HPP
 
-#endif
+
+
+#endif	
