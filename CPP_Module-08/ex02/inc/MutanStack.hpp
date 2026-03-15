@@ -6,30 +6,66 @@
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 17:46:18 by aamaya-g          #+#    #+#             */
-/*   Updated: 2026/03/05 18:05:52 by aamaya-g         ###   ########.fr       */
+/*   Updated: 2026/03/09 16:47:45 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MUTANSTACK_HPP
-# define MUTANSTACK_HPP
+#ifndef MUTANTSTACK_HPP
+#define MUTANTSTACK_HPP
 
-#include <iostream>
 #include <stack>
-#include <deque>
+#include <iostream>
 
 template <typename T>
-class MutantStack : public std::stack<T>
+class MutanStack : public std::stack<T>
 {
 	public:
-		typedef typename std::stack<T>::container_type container_type;
-		typedef typename container_type::iterator iterator;
-		typedef typename container_type::const_iterator const_iterator;
+		MutanStack() : std::stack<T>() {}
+		MutanStack(const MutanStack& other) : std::stack<T>(other) {}
+		~MutanStack() {}
 
-		iterator begin(){ return this->c.begin();}
-		iterator end(){ return this->c.end();}
+		MutanStack& operator=(const MutanStack& other)
+		{
+			if (this != &other)
+				std::stack<T>::operator=(other);
+			return *this;
+		}
 
-		const_iterator begin() const { return this->c.begin();}
-		const_iterator end() const { return this->c.end();}
+		typedef typename std::stack<T>::container_type::iterator iterator;
+		iterator begin()
+		{
+			return this -> c.begin();
+		}
+		
+		iterator end()
+		{
+			return this -> c.end();
+		}
+
+		void	push(const T& value)
+		{
+			std::stack<T>::push(value);
+		}
+
+		void	pop()
+		{
+			std::stack<T>::pop();
+		}
+
+		T& top()
+		{
+			return std::stack<T>::top();
+		}
+
+		const T& top() const
+		{
+			return std::stack<T>::top();
+		}
+
+		size_t size() const
+		{
+			return std::stack<T>::size();
+		}
 };
 
 #endif
