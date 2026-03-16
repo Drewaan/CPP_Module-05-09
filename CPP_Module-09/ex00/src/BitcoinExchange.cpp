@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   BitcoinExchange.cpp                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/16 13:24:36 by aamaya-g          #+#    #+#             */
+/*   Updated: 2026/03/16 13:39:13 by aamaya-g         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/BitcoinExchange.hpp"
 
 BitcoinExchange::BitcoinExchange () {}
@@ -150,7 +162,7 @@ std::string BitcoinExchange::trim(const std::string &line)
 	start = line.find_first_not_of(" \t");
 	if (start == std::string::npos)
 		return "";
-	end = line.find_first_not_of(" \t");
+	end = line.find_last_not_of(" \t");
 	return line.substr(start, end - start + 1);
 }
 
@@ -168,9 +180,9 @@ bool	BitcoinExchange::validateDate(const std::string &date) const
 			return false;
 	}
 
-	int	year = std::atoi(date.substr(0, 4). c_str());
-	int	month = std::atoi(date.substr(5, 2). c_str());
-	int	day = std::atoi(date.substr(8, 2). c_str());
+	int	year = std::atoi(date.substr(0, 4).c_str());
+	int	month = std::atoi(date.substr(5, 2).c_str());
+	int	day = std::atoi(date.substr(8, 2).c_str());
 
 	if (month < 1 || month > 12)
 		return false;
