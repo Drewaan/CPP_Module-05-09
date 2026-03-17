@@ -6,7 +6,7 @@
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 17:01:20 by aamaya-g          #+#    #+#             */
-/*   Updated: 2026/03/16 19:12:26 by aamaya-g         ###   ########.fr       */
+/*   Updated: 2026/03/17 13:43:17 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class RPN
 	public:
 		RPN();
 		RPN(const RPN &other);
-		RPN operator=(const RPN &other);
+		RPN &operator=(const RPN &other);
 		~RPN();
 
 		int	evaluate(const std::string &expr) const;
