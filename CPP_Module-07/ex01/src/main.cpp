@@ -6,18 +6,27 @@
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 16:19:09 by aamaya-g          #+#    #+#             */
-/*   Updated: 2026/02/18 18:58:23 by aamaya-g         ###   ########.fr       */
+/*   Updated: 2026/05/22 19:45:46 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Iter.hpp"
 
 template <typename T>
-void	print(const T &x) { std::cout << x << " "; }
+void	print(const T &x)
+{
+	std::cout << x << " ";
+}
 
-void	capitalize(char &c) { c = std::toupper(c);}
+void	capitalize(char &c)
+{
+	c = std::toupper(c);
+}
 
-void	increment(int &n) { n += 1; }
+void	increment(int &n)
+{
+	n += 1;
+}
 
 int	main()
 {
